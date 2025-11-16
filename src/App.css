@@ -1,0 +1,327 @@
+/* ========== DESKTOP FIRST DESIGN ========== */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-with-profile {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Desktop Header */
+.app-header-bar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.app-header-bar h1 {
+  color: white;
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #fff, #e0e7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+/* Navigation Menu */
+.app-navigation {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.95em;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.welcome-text {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-button, .logout-btn-small {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+  font-weight: 600;
+  backdrop-filter: blur(15px);
+  white-space: nowrap;
+}
+
+.profile-button:hover, .logout-btn-small:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Content Area */
+.app-main-content {
+  flex: 1;
+  padding: 30px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Coming Soon Features */
+.feature-coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.coming-soon-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+.coming-soon-card h2 {
+  color: white;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.coming-soon-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.coming-soon-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.coming-soon-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Large Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .app-header-bar {
+    padding: 18px 35px;
+  }
+  
+  .header-left {
+    gap: 30px;
+  }
+  
+  .app-header-bar h1 {
+    font-size: 2em;
+  }
+  
+  .app-main-content {
+    padding: 25px 35px;
+  }
+  
+  .nav-btn {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .app-header-bar {
+    padding: 15px 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header-left {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .app-navigation {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .user-menu {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .user-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .profile-button, .logout-btn-small {
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  .app-main-content {
+    padding: 20px 25px;
+  }
+  
+  .coming-soon-card {
+    padding: 35px 25px;
+    margin: 20px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .app-header-bar {
+    padding: 12px 20px;
+  }
+  
+  .app-header-bar h1 {
+    font-size: 1.7em;
+  }
+  
+  .app-navigation {
+    gap: 8px;
+  }
+  
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+  
+  .welcome-text {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  
+  .app-main-content {
+    padding: 15px 20px;
+  }
+  
+  .coming-soon-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .coming-soon-card {
+    padding: 30px 20px;
+  }
+  
+  .coming-soon-card h2 {
+    font-size: 1.8em;
+  }
+}
+
+/* Small Mobile Phones (360px and below) */
+@media (max-width: 360px) {
+  .app-header-bar {
+    padding: 10px 15px;
+  }
+  
+  .app-header-bar h1 {
+    font-size: 1.5em;
+  }
+  
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+  
+  .app-main-content {
+    padding: 10px 15px;
+  }
+}

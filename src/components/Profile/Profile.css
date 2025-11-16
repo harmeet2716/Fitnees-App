@@ -1,0 +1,383 @@
+/* ========== DESKTOP FIRST DESIGN ========== */
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-size: 1.05em;
+  font-weight: 600;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Desktop Profile Picture */
+.profile-picture-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.change-photo-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.3em;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.change-photo-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.profile-name {
+  color: white;
+  margin: 15px 0;
+  font-size: 1.8em;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+.fitness-level-badge {
+  padding: 8px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fitness-level-badge.beginner {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.fitness-level-badge.intermediate {
+  background: linear-gradient(135deg, #FF9800, #f57c00);
+}
+
+.fitness-level-badge.advanced {
+  background: linear-gradient(135deg, #F44336, #d32f2f);
+}
+
+.fitness-level-badge.athlete {
+  background: linear-gradient(135deg, #9C27B0, #7b1fa2);
+}
+
+/* Desktop Profile Details */
+.profile-details {
+  color: white;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
+}
+
+.detail-label {
+  font-weight: 600;
+  opacity: 0.9;
+  font-size: 1.1em;
+}
+
+.detail-value {
+  opacity: 0.8;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+/* Desktop Forms in Profile */
+.profile-details .form-group {
+  margin-bottom: 25px;
+}
+
+.profile-details label {
+  display: block;
+  color: white;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.profile-details input,
+.profile-details select {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.05em;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.profile-details input:focus,
+.profile-details select:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  border-color: #667eea;
+}
+
+.profile-details .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Desktop Buttons */
+.edit-button, .save-button, .cancel-button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.save-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.save-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+}
+
+.cancel-button {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}
+
+.cancel-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(244, 67, 54, 0.4);
+}
+
+.profile-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 30px;
+    max-width: 100%;
+  }
+  
+  .profile-card {
+    padding: 30px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .profile-image {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .profile-name {
+    font-size: 1.6em;
+  }
+  
+  .profile-details .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 20px;
+  }
+  
+  .profile-card {
+    padding: 25px;
+    border-radius: 20px;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .change-photo-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+  
+  .profile-name {
+    font-size: 1.4em;
+  }
+  
+  .fitness-level-badge {
+    padding: 7px 20px;
+    font-size: 0.95em;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detail-value {
+    text-align: left;
+  }
+  
+  .profile-details input,
+  .profile-details select {
+    padding: 14px;
+    font-size: 1em;
+  }
+  
+  .edit-button, .save-button, .cancel-button {
+    padding: 16px;
+    font-size: 1.05em;
+  }
+  
+  .profile-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Phones (360px and below) */
+@media (max-width: 360px) {
+  .profile-container {
+    padding: 15px;
+  }
+  
+  .profile-card {
+    padding: 20px;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.6em;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-size: 1.3em;
+  }
+  
+  .fitness-level-badge {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,278 @@
+.progress-page {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.progress-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.progress-header h1 {
+  color: white;
+  font-size: 2.4em;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.progress-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.progress-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.tab-content {
+  min-height: 400px;
+  color: white;
+}
+
+.tab-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.tab-content p {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Calculators Section */
+.calculators-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculators-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.calculators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.calculator-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.calculator-card h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculator-form input,
+.calculator-form select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+}
+
+.calculator-result {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calculator-result strong {
+  font-size: 1em;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-section h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+/* Calculation Preview */
+.calculation-preview {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4CAF50;
+}
+
+.calculation-preview h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.preview-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview-item:last-child {
+  border-bottom: none;
+}
+
+.preview-item span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.preview-item strong {
+  color: white;
+  font-size: 0.95em;
+}
+
+/* Enhanced Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  color: white;
+  font-size: 1.4em;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8em;
+  display: block;
+}
+
+.bmi-category,
+.bodyfat-category {
+  display: block;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+/* Enhanced Measurement Cards */
+.measurement-details {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.measurement-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.measurement-row:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculators-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

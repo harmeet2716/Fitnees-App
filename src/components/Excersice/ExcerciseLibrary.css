@@ -1,0 +1,227 @@
+.exercise-library {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.library-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.library-header h2 {
+  color: white;
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #e0e7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.library-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.library-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 25px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.1em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.category-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+}
+
+.exercise-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.exercise-header h4 {
+  color: white;
+  font-size: 1.35em;
+  margin: 0;
+  font-weight: 700;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.difficulty-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.difficulty-badge.beginner {
+  background: #4CAF50;
+  color: white;
+}
+
+.difficulty-badge.intermediate {
+  background: #FF9800;
+  color: white;
+}
+
+.difficulty-badge.advanced {
+  background: #F44336;
+  color: white;
+}
+
+.exercise-details {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 22px;
+}
+
+.exercise-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.exercise-category, .exercise-type {
+  padding: 6px 14px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.exercise-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.add-exercise-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+}
+
+.add-exercise-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+}
+
+.no-exercises {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.clear-filters-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .exercise-library {
+    padding: 25px;
+  }
+  
+  .exercises-grid {
+    grid-template-columns: 1fr;
+  }
+}
